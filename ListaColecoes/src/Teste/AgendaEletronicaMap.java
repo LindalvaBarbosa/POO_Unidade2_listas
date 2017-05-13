@@ -18,27 +18,27 @@ public class AgendaEletronicaMap {
 	AgendaEletronicaHashMap agenda;
 	@Before
 	public void setUp() throws Exception {
-		c1 = new ContatoMap("01010101","Zezinho@gmail.com");
-		c2 = new ContatoMap("02020202","Maria@hotmail.com");
+		c1 = new ContatoMap("98773834","Silvio@gmail.com");
+		c2 = new ContatoMap("8732632","sil@hotmail.com");
 		agenda = new AgendaEletronicaHashMap();
-		agenda.adicionaContato("Mario", c1);;
-		agenda.adicionaContato("Maria",c2);;
+		agenda.adicionaContato("Silvio", c1);;
+		agenda.adicionaContato("Silmara",c2);;
 		
 	}
 	@Test
 	public void testAddContato() {
-		c3 = new ContatoMap("23421","Ana@gmail.com");
+		c3 = new ContatoMap("23421888","Ana@gmail.com");
 		agenda.adicionaContato("Ana",c3);;
 		assertEquals(3,agenda.getContatoMap());
 	}
 	@Test
 	public void testRemoverContato() {
-		assertTrue(agenda.removerContato("Maria", c2));
+		assertTrue(agenda.removerContato("Silvio", c1));
 	}
 
 	@Test
 	public void testRemoverContatoID() {
-		agenda.removerContatoID("Mario");
+		agenda.removerContatoID("Silmara");
 		assertEquals(1,agenda.getContatoMap());
 	}
 	@Test

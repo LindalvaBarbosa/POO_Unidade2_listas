@@ -17,8 +17,8 @@ public class AgendaEletronicaSetTest {
 	AgendaEletronicaSet agenda;
 	@Before
 	public void setUp() throws Exception {
-		c1 = new Contato("Mario","01010101","Zezinho@gmail.com");
-		c2 = new Contato("Maria","02020202","Maria@hotmail.com");
+		c1 = new Contato("Silvio","98773834","Silvio@gmail.com");
+		c2 = new Contato("Maria","8732632","Maria@hotmail.com");
 		agenda = new AgendaEletronicaSet();
 		agenda.adicionarContato(c1);
 		agenda.adicionarContato(c2);;
@@ -26,13 +26,13 @@ public class AgendaEletronicaSetTest {
 	}
 	@Test
 	public void testAddContato() {
-		c3 = new Contato("Ana","23421","Ana@gmail.com");
+		c3 = new Contato("Elisa","23421","elisa23@gmail.com");
 		agenda.adicionarContato(c3);
 		assertEquals(3,agenda.getContatos());
 	}
 	@Test
 	public void testRemoverContatoContato() {
-		assertTrue(agenda.removerContato(c2));
+		assertTrue(agenda.removerContato(c1));
 	}
 
 	@Test
@@ -43,7 +43,7 @@ public class AgendaEletronicaSetTest {
 
 	@Test
 	public void testListarContatos() {
-		assertEquals(0,agenda.listarContatos("A").size());
+		assertEquals(0,agenda.listarContatos("E").size());
 	}
 
 
